@@ -24,7 +24,8 @@ crate.metadata.extra_terms = "https://thejacksonlaboratory.github.io/isa-context
 
 ## Serving
 
-GitHub Pages publishes the `main` branch root. `.nojekyll` makes Pages serve files as-is.
+A GitHub Actions workflow (`.github/workflows/pages.yml`) validates the `*.jsonld` files and deploys them to
+GitHub Pages on every push to `main`. In the repository settings, Pages > Source must be set to **GitHub Actions**.
 Verify headers with:
 
 ```

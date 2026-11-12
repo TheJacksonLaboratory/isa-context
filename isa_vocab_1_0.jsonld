@@ -97,6 +97,15 @@
       }
     },
     {
+      "@id": "isa:MaterialAttribute",
+      "@type": "rdfs:Class",
+      "rdfs:label": "MaterialAttribute",
+      "rdfs:comment": "A category of characteristic that sources, samples and materials can have, for example organism or age.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
       "@id": "isa:OntologyAnnotation",
       "@type": "rdfs:Class",
       "rdfs:label": "OntologyAnnotation",
@@ -327,7 +336,7 @@
         "@id": "isa:Study"
       },
       "schema:rangeIncludes": {
-        "@id": "isa:OntologyAnnotation"
+        "@id": "isa:MaterialAttribute"
       }
     },
     {
@@ -507,6 +516,18 @@
       }
     },
     {
+      "@id": "isa:characteristicType",
+      "@type": "rdf:Property",
+      "rdfs:label": "characteristicType",
+      "rdfs:comment": "The ontology term that names the characteristic category.",
+      "schema:domainIncludes": {
+        "@id": "isa:MaterialAttribute"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
       "@id": "isa:parameterName",
       "@type": "rdf:Property",
       "rdfs:label": "parameterName",
@@ -674,6 +695,9 @@
         },
         {
           "@id": "isa:ProtocolParameter"
+        },
+        {
+          "@id": "isa:MaterialAttribute"
         }
       ]
     },

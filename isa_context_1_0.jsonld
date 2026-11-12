@@ -38,6 +38,7 @@
     "annotationValue": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#annotationValue",
     "termAccession": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#termAccession",
     "authorList": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#authorList",
+    "status": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#status",
     "doi": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#doi",
     "pubMedID": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#pubMedID",
     "file": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#file",

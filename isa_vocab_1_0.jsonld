@@ -463,6 +463,18 @@
       }
     },
     {
+      "@id": "isa:status",
+      "@type": "rdf:Property",
+      "rdfs:label": "status",
+      "rdfs:comment": "The status of the publication, for example preprint or published.",
+      "schema:domainIncludes": {
+        "@id": "isa:Publication"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
       "@id": "isa:doi",
       "@type": "rdf:Property",
       "rdfs:label": "doi",

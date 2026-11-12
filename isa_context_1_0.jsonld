@@ -1,59 +1,775 @@
 {
   "@context": {
-    "isa": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#",
-    "Investigation": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Investigation",
-    "Study": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Study",
-    "Assay": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Assay",
-    "Source": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Source",
-    "Sample": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Sample",
-    "Material": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Material",
-    "Process": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Process",
-    "Protocol": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Protocol",
-    "ProtocolParameter": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#ProtocolParameter",
-    "ProcessParameterValue": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#ProcessParameterValue",
-    "MaterialAttribute": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#MaterialAttribute",
-    "OntologyAnnotation": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#OntologyAnnotation",
-    "OntologySourceReference": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#OntologySourceReference",
-    "MaterialAttributeValue": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#MaterialAttributeValue",
-    "FactorValue": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#FactorValue",
-    "Publication": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#Publication",
-    "characteristics": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#characteristics",
-    "comments": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#comments",
-    "sources": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#sources",
-    "derivesFrom": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#derivesFrom",
-    "samples": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#samples",
-    "publications": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#publications",
-    "people": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#people",
-    "studyDesignDescriptors": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#studyDesignDescriptors",
-    "ontologySourceReferences": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#ontologySourceReferences",
-    "protocols": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#protocols",
-    "factors": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#factors",
-    "characteristicCategories": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#characteristicCategories",
-    "processSequence": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#processSequence",
-    "measurementType": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#measurementType",
-    "technologyType": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#technologyType",
-    "technologyPlatform": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#technologyPlatform",
-    "submissionDate": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#submissionDate",
-    "publicReleaseDate": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#publicReleaseDate",
-    "annotationValue": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#annotationValue",
-    "termAccession": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#termAccession",
-    "authorList": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#authorList",
-    "status": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#status",
-    "doi": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#doi",
-    "pubMedID": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#pubMedID",
-    "file": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#file",
-    "parameters": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#parameters",
-    "characteristicType": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#characteristicType",
-    "parameterName": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#parameterName",
-    "protocolType": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#protocolType",
-    "executesProtocol": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#executesProtocol",
-    "inputs": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#inputs",
-    "outputs": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#outputs",
-    "previousProcess": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#previousProcess",
-    "nextProcess": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#nextProcess",
-    "parameterValues": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#parameterValues",
-    "value": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#value",
-    "category": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#category",
-    "unit": "https://thejacksonlaboratory.github.io/isa-context/isa_vocab_1_0.jsonld#unit"
-  }
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "isa": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#",
+    "Investigation": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Investigation",
+    "Study": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Study",
+    "Assay": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Assay",
+    "Source": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Source",
+    "Sample": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Sample",
+    "Material": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Material",
+    "Process": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Process",
+    "Protocol": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Protocol",
+    "ProtocolParameter": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#ProtocolParameter",
+    "ProcessParameterValue": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#ProcessParameterValue",
+    "MaterialAttribute": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#MaterialAttribute",
+    "OntologyAnnotation": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#OntologyAnnotation",
+    "OntologySourceReference": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#OntologySourceReference",
+    "MaterialAttributeValue": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#MaterialAttributeValue",
+    "FactorValue": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#FactorValue",
+    "Publication": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#Publication",
+    "characteristics": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#characteristics",
+    "comments": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#comments",
+    "sources": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#sources",
+    "derivesFrom": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#derivesFrom",
+    "samples": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#samples",
+    "publications": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#publications",
+    "people": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#people",
+    "studyDesignDescriptors": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#studyDesignDescriptors",
+    "ontologySourceReferences": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#ontologySourceReferences",
+    "protocols": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#protocols",
+    "factors": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#factors",
+    "characteristicCategories": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#characteristicCategories",
+    "processSequence": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#processSequence",
+    "measurementType": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#measurementType",
+    "technologyType": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#technologyType",
+    "technologyPlatform": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#technologyPlatform",
+    "submissionDate": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#submissionDate",
+    "publicReleaseDate": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#publicReleaseDate",
+    "annotationValue": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#annotationValue",
+    "termAccession": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#termAccession",
+    "authorList": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#authorList",
+    "doi": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#doi",
+    "pubMedID": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#pubMedID",
+    "file": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#file",
+    "parameters": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#parameters",
+    "characteristicType": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#characteristicType",
+    "parameterName": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#parameterName",
+    "protocolType": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#protocolType",
+    "executesProtocol": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#executesProtocol",
+    "inputs": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#inputs",
+    "outputs": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#outputs",
+    "previousProcess": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#previousProcess",
+    "nextProcess": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#nextProcess",
+    "parameterValues": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#parameterValues",
+    "value": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#value",
+    "category": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#category",
+    "unit": "https://thejacksonlaboratory.github.io/isa-context/isa_context_1_0.jsonld#unit"
+  },
+  "@graph": [
+    {
+      "@id": "isa:Investigation",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Investigation",
+      "rdfs:comment": "A high-level research context that groups one or more related studies.",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "isa:Study",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Study",
+      "rdfs:comment": "A unit of research with a defined design. Holds the sources, protocols and assays used to answer a research question.",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "isa:Assay",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Assay",
+      "rdfs:comment": "A test performed on samples from a study that produces measurements or data files.",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "isa:Source",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Source",
+      "rdfs:comment": "The subject material, for example an animal, that samples are derived from.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:Sample",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Sample",
+      "rdfs:comment": "Material taken from a source and used in an assay.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:Material",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Material",
+      "rdfs:comment": "An intermediate material used or produced by a process.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:Process",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Process",
+      "rdfs:comment": "An application of a protocol to inputs, producing outputs.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:Protocol",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Protocol",
+      "rdfs:comment": "A described procedure that is executed by processes.",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "isa:ProtocolParameter",
+      "@type": "rdfs:Class",
+      "rdfs:label": "ProtocolParameter",
+      "rdfs:comment": "A named, typed parameter that a protocol defines and that a process supplies a value for.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:ProcessParameterValue",
+      "@type": "rdfs:Class",
+      "rdfs:label": "ProcessParameterValue",
+      "rdfs:comment": "The value a process used for a protocol parameter.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:MaterialAttribute",
+      "@type": "rdfs:Class",
+      "rdfs:label": "MaterialAttribute",
+      "rdfs:comment": "A category of characteristic that sources, samples and materials can have, for example organism or age.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:OntologyAnnotation",
+      "@type": "rdfs:Class",
+      "rdfs:label": "OntologyAnnotation",
+      "rdfs:comment": "A term from an ontology or controlled vocabulary, with its accession URL.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:OntologySourceReference",
+      "@type": "rdfs:Class",
+      "rdfs:label": "OntologySourceReference",
+      "rdfs:comment": "The ontology or vocabulary that annotation terms come from.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:MaterialAttributeValue",
+      "@type": "rdfs:Class",
+      "rdfs:label": "MaterialAttributeValue",
+      "rdfs:comment": "A characteristic of a source, sample or material: a category paired with a value.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:FactorValue",
+      "@type": "rdfs:Class",
+      "rdfs:label": "FactorValue",
+      "rdfs:comment": "The value of an experimental factor for a sample: a category paired with a value.",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "isa:Publication",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Publication",
+      "rdfs:comment": "A publication related to an investigation or study.",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "isa:characteristics",
+      "@type": "rdf:Property",
+      "rdfs:label": "characteristics",
+      "rdfs:comment": "Characteristics describing a source, sample or material.",
+      "schema:domainIncludes": [
+        {
+          "@id": "isa:Source"
+        },
+        {
+          "@id": "isa:Sample"
+        },
+        {
+          "@id": "isa:Material"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "isa:MaterialAttributeValue"
+      }
+    },
+    {
+      "@id": "isa:comments",
+      "@type": "rdf:Property",
+      "rdfs:label": "comments",
+      "rdfs:comment": "Free-form named comments attached to the entity.",
+      "schema:domainIncludes": [
+        {
+          "@id": "isa:Source"
+        },
+        {
+          "@id": "isa:Sample"
+        },
+        {
+          "@id": "isa:Study"
+        },
+        {
+          "@id": "isa:Assay"
+        },
+        {
+          "@id": "schema:Person"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "schema:Comment"
+      }
+    },
+    {
+      "@id": "isa:sources",
+      "@type": "rdf:Property",
+      "rdfs:label": "sources",
+      "rdfs:comment": "Sources that samples derive from.",
+      "schema:domainIncludes": {
+        "@id": "isa:Study"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:Source"
+      }
+    },
+    {
+      "@id": "isa:derivesFrom",
+      "@type": "rdf:Property",
+      "rdfs:label": "derivesFrom",
+      "rdfs:comment": "What the sample or material was derived from.",
+      "schema:domainIncludes": [
+        {
+          "@id": "isa:Sample"
+        },
+        {
+          "@id": "isa:Material"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "isa:Source"
+        },
+        {
+          "@id": "isa:Sample"
+        },
+        {
+          "@id": "isa:Material"
+        }
+      ]
+    },
+    {
+      "@id": "isa:samples",
+      "@type": "rdf:Property",
+      "rdfs:label": "samples",
+      "rdfs:comment": "Samples analysed in an assay.",
+      "schema:domainIncludes": {
+        "@id": "isa:Assay"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:Sample"
+      }
+    },
+    {
+      "@id": "isa:publications",
+      "@type": "rdf:Property",
+      "rdfs:label": "publications",
+      "rdfs:comment": "Publications related to the investigation or study.",
+      "schema:domainIncludes": [
+        {
+          "@id": "isa:Investigation"
+        },
+        {
+          "@id": "isa:Study"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "isa:Publication"
+      }
+    },
+    {
+      "@id": "isa:people",
+      "@type": "rdf:Property",
+      "rdfs:label": "people",
+      "rdfs:comment": "People who are contacts for the investigation or study.",
+      "schema:domainIncludes": [
+        {
+          "@id": "isa:Investigation"
+        },
+        {
+          "@id": "isa:Study"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "schema:Person"
+      }
+    },
+    {
+      "@id": "isa:studyDesignDescriptors",
+      "@type": "rdf:Property",
+      "rdfs:label": "studyDesignDescriptors",
+      "rdfs:comment": "Terms describing the design of the study.",
+      "schema:domainIncludes": {
+        "@id": "isa:Study"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
+      "@id": "isa:ontologySourceReferences",
+      "@type": "rdf:Property",
+      "rdfs:label": "ontologySourceReferences",
+      "rdfs:comment": "Ontologies and vocabularies used to annotate the investigation.",
+      "schema:domainIncludes": {
+        "@id": "isa:Investigation"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologySourceReference"
+      }
+    },
+    {
+      "@id": "isa:protocols",
+      "@type": "rdf:Property",
+      "rdfs:label": "protocols",
+      "rdfs:comment": "Protocols used in the study.",
+      "schema:domainIncludes": {
+        "@id": "isa:Study"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:Protocol"
+      }
+    },
+    {
+      "@id": "isa:factors",
+      "@type": "rdf:Property",
+      "rdfs:label": "factors",
+      "rdfs:comment": "Experimental factors of the study, as ontology terms.",
+      "schema:domainIncludes": {
+        "@id": "isa:Study"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
+      "@id": "isa:characteristicCategories",
+      "@type": "rdf:Property",
+      "rdfs:label": "characteristicCategories",
+      "rdfs:comment": "Categories of characteristics recorded for the study's sources and samples.",
+      "schema:domainIncludes": {
+        "@id": "isa:Study"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:MaterialAttribute"
+      }
+    },
+    {
+      "@id": "isa:processSequence",
+      "@type": "rdf:Property",
+      "rdfs:label": "processSequence",
+      "rdfs:comment": "The processes carried out in the assay.",
+      "schema:domainIncludes": {
+        "@id": "isa:Assay"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:Process"
+      }
+    },
+    {
+      "@id": "isa:measurementType",
+      "@type": "rdf:Property",
+      "rdfs:label": "measurementType",
+      "rdfs:comment": "What the assay measures.",
+      "schema:domainIncludes": {
+        "@id": "isa:Assay"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
+      "@id": "isa:technologyType",
+      "@type": "rdf:Property",
+      "rdfs:label": "technologyType",
+      "rdfs:comment": "The technology used to take the measurement.",
+      "schema:domainIncludes": {
+        "@id": "isa:Assay"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
+      "@id": "isa:technologyPlatform",
+      "@type": "rdf:Property",
+      "rdfs:label": "technologyPlatform",
+      "rdfs:comment": "The platform or instrument the technology ran on.",
+      "schema:domainIncludes": {
+        "@id": "isa:Assay"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "isa:submissionDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "submissionDate",
+      "rdfs:comment": "Date the study was submitted.",
+      "schema:domainIncludes": {
+        "@id": "isa:Study"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "isa:publicReleaseDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "publicReleaseDate",
+      "rdfs:comment": "Date the study was or will be publicly released.",
+      "schema:domainIncludes": {
+        "@id": "isa:Study"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "isa:annotationValue",
+      "@type": "rdf:Property",
+      "rdfs:label": "annotationValue",
+      "rdfs:comment": "The label of the ontology term.",
+      "schema:domainIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "isa:termAccession",
+      "@type": "rdf:Property",
+      "rdfs:label": "termAccession",
+      "rdfs:comment": "URL that identifies the term in its ontology.",
+      "schema:domainIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "isa:authorList",
+      "@type": "rdf:Property",
+      "rdfs:label": "authorList",
+      "rdfs:comment": "Authors of the publication, as text.",
+      "schema:domainIncludes": {
+        "@id": "isa:Publication"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "isa:doi",
+      "@type": "rdf:Property",
+      "rdfs:label": "doi",
+      "rdfs:comment": "DOI of the publication.",
+      "schema:domainIncludes": {
+        "@id": "isa:Publication"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:URL"
+        }
+      ]
+    },
+    {
+      "@id": "isa:pubMedID",
+      "@type": "rdf:Property",
+      "rdfs:label": "pubMedID",
+      "rdfs:comment": "PubMed ID of the publication.",
+      "schema:domainIncludes": {
+        "@id": "isa:Publication"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "isa:file",
+      "@type": "rdf:Property",
+      "rdfs:label": "file",
+      "rdfs:comment": "File that describes the ontology source.",
+      "schema:domainIncludes": {
+        "@id": "isa:OntologySourceReference"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "isa:parameters",
+      "@type": "rdf:Property",
+      "rdfs:label": "parameters",
+      "rdfs:comment": "Parameters the protocol defines.",
+      "schema:domainIncludes": {
+        "@id": "isa:Protocol"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:ProtocolParameter"
+      }
+    },
+    {
+      "@id": "isa:characteristicType",
+      "@type": "rdf:Property",
+      "rdfs:label": "characteristicType",
+      "rdfs:comment": "The ontology term that names the characteristic category.",
+      "schema:domainIncludes": {
+        "@id": "isa:MaterialAttribute"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
+      "@id": "isa:parameterName",
+      "@type": "rdf:Property",
+      "rdfs:label": "parameterName",
+      "rdfs:comment": "Ontology term naming the parameter.",
+      "schema:domainIncludes": {
+        "@id": "isa:ProtocolParameter"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
+      "@id": "isa:protocolType",
+      "@type": "rdf:Property",
+      "rdfs:label": "protocolType",
+      "rdfs:comment": "The kind of protocol, as an ontology term.",
+      "schema:domainIncludes": {
+        "@id": "isa:Protocol"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    },
+    {
+      "@id": "isa:executesProtocol",
+      "@type": "rdf:Property",
+      "rdfs:label": "executesProtocol",
+      "rdfs:comment": "The protocol the process executes.",
+      "schema:domainIncludes": {
+        "@id": "isa:Process"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:Protocol"
+      }
+    },
+    {
+      "@id": "isa:inputs",
+      "@type": "rdf:Property",
+      "rdfs:label": "inputs",
+      "rdfs:comment": "What the process takes as input.",
+      "schema:domainIncludes": {
+        "@id": "isa:Process"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "isa:Source"
+        },
+        {
+          "@id": "isa:Sample"
+        },
+        {
+          "@id": "isa:Material"
+        },
+        {
+          "@id": "schema:MediaObject"
+        }
+      ]
+    },
+    {
+      "@id": "isa:outputs",
+      "@type": "rdf:Property",
+      "rdfs:label": "outputs",
+      "rdfs:comment": "What the process produces.",
+      "schema:domainIncludes": {
+        "@id": "isa:Process"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "isa:Sample"
+        },
+        {
+          "@id": "isa:Material"
+        },
+        {
+          "@id": "schema:MediaObject"
+        }
+      ]
+    },
+    {
+      "@id": "isa:previousProcess",
+      "@type": "rdf:Property",
+      "rdfs:label": "previousProcess",
+      "rdfs:comment": "The process that runs immediately before this one.",
+      "schema:domainIncludes": {
+        "@id": "isa:Process"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:Process"
+      }
+    },
+    {
+      "@id": "isa:nextProcess",
+      "@type": "rdf:Property",
+      "rdfs:label": "nextProcess",
+      "rdfs:comment": "The process that runs immediately after this one.",
+      "schema:domainIncludes": {
+        "@id": "isa:Process"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:Process"
+      }
+    },
+    {
+      "@id": "isa:parameterValues",
+      "@type": "rdf:Property",
+      "rdfs:label": "parameterValues",
+      "rdfs:comment": "Values the process used for the protocol's parameters.",
+      "schema:domainIncludes": {
+        "@id": "isa:Process"
+      },
+      "schema:rangeIncludes": {
+        "@id": "isa:ProcessParameterValue"
+      }
+    },
+    {
+      "@id": "isa:value",
+      "@type": "rdf:Property",
+      "rdfs:label": "value",
+      "rdfs:comment": "The value of a characteristic, factor, parameter or comment: an ontology term or plain text.",
+      "schema:domainIncludes": [
+        {
+          "@id": "isa:MaterialAttributeValue"
+        },
+        {
+          "@id": "isa:FactorValue"
+        },
+        {
+          "@id": "isa:ProcessParameterValue"
+        },
+        {
+          "@id": "schema:Comment"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "isa:OntologyAnnotation"
+        },
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:Number"
+        }
+      ]
+    },
+    {
+      "@id": "isa:category",
+      "@type": "rdf:Property",
+      "rdfs:label": "category",
+      "rdfs:comment": "What the value describes: an ontology term, or for a parameter value the protocol parameter.",
+      "schema:domainIncludes": [
+        {
+          "@id": "isa:MaterialAttributeValue"
+        },
+        {
+          "@id": "isa:FactorValue"
+        },
+        {
+          "@id": "isa:ProcessParameterValue"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "isa:OntologyAnnotation"
+        },
+        {
+          "@id": "isa:ProtocolParameter"
+        },
+        {
+          "@id": "isa:MaterialAttribute"
+        }
+      ]
+    },
+    {
+      "@id": "isa:unit",
+      "@type": "rdf:Property",
+      "rdfs:label": "unit",
+      "rdfs:comment": "The unit of the value.",
+      "schema:domainIncludes": [
+        {
+          "@id": "isa:MaterialAttributeValue"
+        },
+        {
+          "@id": "isa:FactorValue"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "isa:OntologyAnnotation"
+      }
+    }
+  ]
 }
